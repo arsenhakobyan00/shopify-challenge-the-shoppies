@@ -1,0 +1,124 @@
+:root {
+    --box-shadow: 0px 0px 5px 0.01px rgba(32, 32, 32, 0.24);
+    --nominate-cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🏆</text></svg>") 16 0, auto; /* tool used: emojicursor.app */
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f3f3;
+    background-image: url('../img/geometric-leaves.png');
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: rgb(20, 195, 20);
+    font-style: italic;
+}
+
+.container {
+    width: 80%;
+    margin: 10% auto;
+}
+
+#search-length-warning {
+    display: none;
+    color: red;
+    font-size: 0.9em;
+}
+
+.search {
+    background-color: #fff;
+    padding: 15px;
+    /* width: ; */
+    margin: 5px auto;
+    box-shadow: var(--box-shadow);
+}
+
+.search .search-box {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 6px 10px 10px 10px;
+    margin: 5px auto;
+}
+
+.search .movie-title {
+    font-size: 1em;
+}
+
+.search .search-box input {
+    border: none;
+    font-size: 0.9em;
+    width: 90%;
+    outline: none;
+}
+
+.search .fa-search {
+    font-size: 0.9em;
+}
+
+.results,
+.nominations {
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.results-container,
+.nominations-container {
+    padding: 15px;
+    margin: 15px auto;
+}
+
+ul {
+    width: 80%;
+    margin: 15px auto;
+}
+
+li {
+    margin: 15px auto;
+    font-size: 1.1em;
+}
+
+.poster {
+    width: 100%;
+    margin: 8px auto auto auto;
+    border: 1px solid;
+}
+
+.nominate-btn {
+    background-color: rgb(243, 247, 247);
+    box-shadow: var(--box-shadow);
+    cursor: var(--nominate-cursor);
+    outline: none;
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 8px 15px;
+    margin-top: 8px;
+    font-size: 1em;
+}
+
+@media all and (min-width: 900px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .search {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%;
+    }
+
+    .poster {
+        width: 50%;
+    }
+}
