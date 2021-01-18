@@ -14,7 +14,7 @@ const searchMovie = () => {
     }
     else {
         hide($$('#search-length-warning'))
-        fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=13e10828&type=movie&s=${inputVal}`)
+        fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=13e10828&type=movie&s=${inputVal}`)
             .then(resp => resp.json())
             .then(data => {
                 const movieList = $$('.movie-list')
