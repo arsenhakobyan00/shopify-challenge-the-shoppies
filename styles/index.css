@@ -1,6 +1,9 @@
 :root {
     --box-shadow: 0px 0px 5px 0.01px rgba(32, 32, 32, 0.24);
     --nominate-cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🏆</text></svg>") 16 0, auto; /* tool used: emojicursor.app */
+
+    /* Colors */
+    --green: rgb(34, 158, 34);
 }
 
 * {
@@ -10,21 +13,29 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: #f3f3f3;
     background-image: url('../img/geometric-leaves.png');
+    position: relative;
+    padding-bottom: 6rem;
+    min-height: 100%;
 }
 
 h1 {
     margin-bottom: 10px;
     font-size: 2em;
-    color: rgb(20, 195, 20);
+    color: var(--green);
     font-style: italic;
 }
 
 .container {
     width: 80%;
-    margin: 10% auto;
+    margin: auto;
+    padding-top: 10%;
 }
 
 #search-length-warning {
@@ -36,7 +47,6 @@ h1 {
 .search {
     background-color: #fff;
     padding: 15px;
-    /* width: ; */
     margin: 5px auto;
     box-shadow: var(--box-shadow);
 }
@@ -105,6 +115,29 @@ li {
     font-size: 1em;
 }
 
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    min-height: 90px;
+    padding: 1rem;
+}
+
+footer div {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+footer div .name {
+    font-size: 1.1em;
+}
+
+footer a {
+    color: var(--green);
+}
+
 @media all and (min-width: 900px) {
     .container {
         display: grid;
@@ -120,5 +153,9 @@ li {
 
     .poster {
         width: 50%;
+    }
+
+    footer div {
+        font-size: 1.3em;
     }
 }
