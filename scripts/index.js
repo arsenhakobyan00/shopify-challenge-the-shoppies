@@ -19,6 +19,4 @@ const toggle = (el) => {
 hide($$('.results'))
 hide($$('.nominations'))
 
-window.addEventListener('load', () => {
-    $$('#movie_search').addEventListener('keyup', searchMovie)
-})
+$$('#movie_search').addEventListener('keyup', searchMovie)

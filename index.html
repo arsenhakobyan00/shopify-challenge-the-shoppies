@@ -3,10 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#f3f3f3" />
+        <meta name="description" content="A demo website created for learning about APIs and PWAs" />
+        <link rel="manifest" href="./manifest.json" />
+        <link rel="icon" href="./img/icons/favicon.ico">
+        <link rel="apple-touch-icon" href="./img/icons/apple-touch-icon.png" />
         <link rel="stylesheet" href="./styles/index.css" />
         <title>The Shoppies</title>
     </head>
     <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
         <div class="container">
             <header>
                 <h1>The Shoppies</h1>
@@ -50,8 +56,16 @@
                 </div>
             </div>
         </footer>
-        
 
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('./scripts/serviceworker.js')
+                        .then((reg) => console.log('Success', reg.scope))
+                        .catch((err) => console.log('Failure', err));
+                })
+            }
+        </script>
         <script src="https://kit.fontawesome.com/a71eae6c05.js" crossorigin="anonymous"></script>
         <script src="./scripts/mainFunctions.js"></script>
         <script src="./scripts/index.js"></script>
