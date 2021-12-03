@@ -49,10 +49,12 @@ h1 {
     padding: 15px;
     margin: 5px auto;
     box-shadow: var(--box-shadow);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 2px
 }
 
 .search .search-box {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 2px;
     padding: 6px 10px 10px 10px;
     margin: 5px auto;
